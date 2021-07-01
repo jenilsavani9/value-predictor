@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}
+Flight
+{% endblock title %}
+
+{% block body %}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Flight Price Prediction</h1>
+</div>
+
+<form action="/flight/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="Airline" class="form-label">Airline</label>
+        <select class="form-select" aria-label="Default select example" name="Airline" id='Airline' required>
+            <option selected disabled>Select Airline</option>
+            <option value="Jet Airways">Jet Airways</option>
+            <option value="IndiGo">IndiGo</option>
+            <option value="Air India">Air India</option>
+            <option value="Multiple carriers">Multiple carriers</option>
+            <option value="SpiceJet">SpiceJet</option>
+            <option value="Vistara">Vistara</option>
+            <option value="Air Asia">Air Asia</option>
+            <option value="GoAir">GoAir</option>
+            <option value="Jet Airways Business">Jet Airways Business</option>
+            <option value="Vistara Premium economy">Vistara Premium economy</option>
+            <option value="Trujet">Trujet</option>
+            <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="Date_of_Journey" class="form-label">HOME ADDERSS</label>
+        <input type="date" class="form-control" id="Date_of_Journey" name="Date_of_Journey"
+            placeholder="Enter Date of Journey" required>
+    </div>
+    <div class="mb-3">
+        <label for="Source" class="form-label">Source</label>
+        <select class="form-select" aria-label="Default select example" name="Source" id='Source' required>
+            <option selected disabled>Select Source</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="Destination" class="form-label">Destination</label>
+        <select class="form-select" aria-label="Default select example" name="Destination" id='Destination' required>
+            <option selected disabled>Select Destination</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="New_Delhi">New Delhi</option>
+            <option value="Cochin">Cochin</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="Dep_Time" class="form-label">Departure Time</label>
+        <input type="time" class="form-control" id="Dep_Time" name="Dep_Time" placeholder="Enter Departure Time"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="Arrival_Time" class="form-label">Arrival Time</label>
+        <input type="time" class="form-control" id="Arrival_Time" name="Arrival_Time" placeholder="Enter Departure Time"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="Total_Stops" class="form-label">Total Stops</label>
+        <input type="number" class="form-control" id="Total_Stops" name="Total_Stops" placeholder="Enter Total Stops"
+            required>
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+{% endblock body %}
