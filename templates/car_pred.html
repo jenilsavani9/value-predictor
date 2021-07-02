@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Car price Prediction {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header">Car Price Prediction</div>
+        <div class="card-body">
+            <h5 class="card-title">You can sell this car at {{ answer }}</h5>
+        </div>
+    </div>
+
+    <a href="/" type="button" class="btn btn-outline-dark">Home</a>
+</div>
+
+{%endblock body%}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} Car Price Prediction {% endblock title %}
+
+{% block body %}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Car Price Prediction</h1>
+</div>
+
+<form action="/car/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your car name and model number" required>
+    </div>
+    <div class="mb-3">
+        <label for="owner" class="form-label">Owner</label>
+        <input type="number" class="form-control" id="owner" name="owner" placeholder="Enter how many times your car sold" required>
+    </div>
+    <div class="mb-3">
+        <label for="km" class="form-label">Kms Driven</label>
+        <input type="number" class="form-control" id="km" name="km" placeholder="Enter km Driven" required>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Present Price</label>
+        <input type="text" class="form-control" id="price" name="price" placeholder="Enter car's Present Price" required>
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name='age' placeholder="Enter car age" required>
+    </div>
+    <div class="mb-3">
+        <label for="fuel" class="form-label">Fuel Type</label>
+        <select class="form-select" aria-label="Default select example" id='fuel' name="fuel" required>
+            <option selected disabled>Select fule type</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Petrol">Petrol</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="seller" class="form-label">seller Type</label>
+        <select class="form-select" aria-label="Default select example" name="seller" id='seller' required>
+            <option selected disabled>Select seller type</option>
+            <option value="Individual">Individual</option>
+            <option value="Dealer">Dealer</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="Transmission" class="form-label">Transmission Type</label>
+        <select class="form-select" aria-label="Default select example" name="Transmission" id='Transmission' required>
+            <option selected disabled>Select Transmission type</option>
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+
+{% endblock body %}
