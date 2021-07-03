@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %} Insurance {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Insurance Price Prediction</h1>
+</div>
+
+<form action="/insurance/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="age" class="form-label">AGE</label>
+        <input type="number" class="form-control" id="age" name="age" placeholder="Enter your Age"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="gender" class="form-label">GENDER</label>
+        <select class="form-select" aria-label="Default select example" name="gender" id='gender' required>
+            <option selected disabled>Select sex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="bmi" class="form-label">BODY MASS INDEX</label>
+        <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Enter BMI"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="children" class="form-label">CHILDREN</label>
+        <input type="text" class="form-control" id="children" name="children" placeholder="How many children you have"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="smoker" class="form-label">SMOKER</label>
+        <select class="form-select" aria-label="Default select example" name="smoker" id='smoker' required>
+            <option selected disabled>Select the Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="region" class="form-label">REGION</label>
+        <select class="form-select" aria-label="Default select example" name="region" id='region' required>
+            <option selected disabled>Select the region</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+
+{%endblock body%}
