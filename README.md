@@ -45,7 +45,7 @@ Start the server
 
 ## Deployement
 
-This app is deployed on Heroku. you can fing app [Here](https://value-predictor.herokuapp.com/)
+This app is deployed on Heroku. you can find app [Here](https://value-predictor.herokuapp.com/)
 
 
 ## Feedback
