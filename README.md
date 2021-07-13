@@ -23,7 +23,7 @@ The Code is written in Python 3. If you don't have Python installed you can find
 Clone the project
 
 ```bash
-  git clone https://github.com/jenilsavani9/value-predictor/tree/main
+  git clone https://github.com/jenilsavani9/value-predictor
 ```
 
 Go to the project directory
